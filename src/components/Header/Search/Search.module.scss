@@ -1,0 +1,18 @@
+.search {
+  display: flex;
+
+  &__input {
+    margin-right: .5em;
+  }
+
+  &__icon {
+    cursor: pointer;
+
+    img {
+      width: 1.75em;
+    }
+  }
+
+
+
+}

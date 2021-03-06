@@ -1,0 +1,9 @@
+.logo {
+  display: flex;
+  color: var(--color-black);
+
+  &__img {
+    height: 2em;
+    margin-right: .5em;
+  }
+}
