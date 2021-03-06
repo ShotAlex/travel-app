@@ -1,4 +1,5 @@
 import React from 'react';
+import classes from './Video.module.scss'
 
 
 const Video = () => {

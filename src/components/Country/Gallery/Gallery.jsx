@@ -1,4 +1,5 @@
 import React from 'react';
+import classes from './Gallery.module.scss'
 
 const Gallery = () => {
   return (
