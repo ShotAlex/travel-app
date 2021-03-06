@@ -1,0 +1,19 @@
+.footer {
+  padding: 1em;
+  text-align: center;
+
+  &__text {
+    color: var(--color-black);
+    opacity: .5;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: var(--color-second);
+    opacity: .6;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
