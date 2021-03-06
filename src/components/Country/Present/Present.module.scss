@@ -1,0 +1,24 @@
+.present {
+  clip-path: polygon(0 0, 0100% 0, 100% 90%, 0 100%);
+  padding: 10em 0;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.title {
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  color: var(--color-white);
+  padding: 1em 2em;
+  width: fit-content;
+  background-color: rgba(0 0 0 / .5);
+}
+
+.picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}

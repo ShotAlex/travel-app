@@ -1,7 +1,6 @@
 import React from 'react';
 import MainLayout from "../../containers/MainLayout";
 import classes from './Home.module.scss'
-
 import belImg from '../../assets/images/home-cards/belarus.jpg'
 
 const Home = () => {
@@ -10,8 +9,6 @@ const Home = () => {
     <MainLayout search={true} >
       <article>
         <h1>Countries</h1>
-
-
         <article className={classes.list}>
 
           <button className={classes.card}>
@@ -22,8 +19,6 @@ const Home = () => {
 
         </article>
       </article>
-
-
 
       {/*<section>Заглавная картинка</section>*/}
       {/*<section>Мне повезёт</section>*/}
