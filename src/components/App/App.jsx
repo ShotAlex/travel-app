@@ -9,7 +9,7 @@ function App() {
     <div className={classes.app}>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/country" component={Country} />
+        <Route path="/go" component={Country} />
         <Redirect to="/" />
       </Switch>
     </div>
