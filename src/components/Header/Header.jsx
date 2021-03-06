@@ -5,11 +5,13 @@ import LanguageMenu from "./LanguageMenu/LanguageMenu";
 import Logotype from "./Logotype/Logotype";
 
 
-const Header = () => {
+const Header = ({search = false}) => {
   return (
     <header className={classes.header}>
       <Logotype />
-      <Search />
+      {
+        search && <Search />
+      }
       <LanguageMenu />
     </header>
   );

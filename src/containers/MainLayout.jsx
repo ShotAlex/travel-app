@@ -3,10 +3,10 @@ import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import classes from './MainLayout.module.scss'
 
-const MainLayout = ({children}) => {
+const MainLayout = (props, {children}) => {
   return (
     <>
-      <Header />
+      <Header search={props.search} />
       <main className={classes.main}>
         {children}
       </main>

@@ -1,0 +1,31 @@
+.lang {
+  position: relative;
+  width: 4.25em;
+
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    padding: .25em;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+
+    img {
+      margin-left: .5em;
+      height: 1.25em;
+    }
+  }
+}
+
+.container {
+  background-color: lightgray;
+  border-radius: .5em;
+  position: absolute;
+  right: 0;
+  width: 4.25em;
+
+  .show {
+    display: block;
+  }
+}

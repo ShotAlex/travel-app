@@ -3,7 +3,7 @@ import MainLayout from "../../containers/MainLayout";
 
 const Home = () => {
   return (
-    <MainLayout>
+    <MainLayout search={true} >
       Home
     </MainLayout>
   );
