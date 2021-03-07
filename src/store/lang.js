@@ -14,7 +14,6 @@ class Lang {
     lang: 'EN',
     flag: enImg
   }
-
   langs = [
     {
       lang: 'EN',
@@ -29,6 +28,10 @@ class Lang {
       flag: esImg,
     },
   ]
+
+  setCurrentLang(lang) {
+    this.currentLang = this.langs.filter(item => item.lang === lang)[0]
+  }
 }
 
 export default Lang;

@@ -1,8 +1,5 @@
 import React from 'react';
 import classes from './LanguageMenu.module.scss'
-import enImg from '../../../assets/images/lang-icons/united-states.svg'
-import ruImg from '../../../assets/images/lang-icons/russia.svg'
-import esImg from '../../../assets/images/lang-icons/spain.svg'
 import {langStore} from "../../../store/store";
 
 const LanguageMenu = () => {
@@ -11,7 +8,8 @@ const LanguageMenu = () => {
 
   const changeLang = lang => {
     setVisibleMenu(() => false)
-    setLang(lang)
+    // setLang(lang)
+    langStore.setCurrentLang(lang)
   }
 
   const showLangMenu = () => {
@@ -31,10 +29,12 @@ const LanguageMenu = () => {
             {
               langStore.langs.map((item) => {
                 if(item.lang === langStore.currentLang.lang) return;
+
                 return (
                     <button
                     className={classes.lang__btn}
                     onClick={() => changeLang(item.lang)}
+                    key={item.lang}
                   >
                     {item.lang} <img src={item.flag} alt={item.lang}/>
                   </button>

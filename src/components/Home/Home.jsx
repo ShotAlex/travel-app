@@ -15,7 +15,7 @@ const Home = () => {
         <article className={classes.list}>
           {
             countriesStore.countries.map((item) => (
-              <button className={classes.card}>
+              <button className={classes.card} key={item.country}>
                 <img src={item.countryImage} alt={`${item.country} ${item.capital}`} className={classes.list__cover}/>
                 <h2>{item.country}</h2>
                 <p>{item.capital}</p>
