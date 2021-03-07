@@ -12,7 +12,7 @@ import Map from "./Map/Map";
 const Country = () => {
   return (
     <MainLayout>
-      {/*<Present />*/}
+      <Present />
 
       <article className={classes.description}>
         <Description />

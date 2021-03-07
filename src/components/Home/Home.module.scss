@@ -66,8 +66,10 @@
     h2,
     p {
       color: var(--color-white);
-      background-color: rgba(0 0 0 / .25);
       transform: translateY(-20px);
+      background-color: rgba(0 0 0 / .25);
+      backdrop-filter: blur(2px);
+
     }
 
     &:before {
