@@ -8,6 +8,11 @@ class Time {
 
   localTime = ''
   Country = ''
+
+  getLocalTime() {
+    var d = new Date();
+    var n = d.getTimezoneOffset();
+  }
 }
 
 export default Time;

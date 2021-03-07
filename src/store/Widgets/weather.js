@@ -33,8 +33,6 @@ class Weather {
     this.speed = `Speed: ${Math.round(data.wind.speed)}m/s`
     this.city = data.name;
 
-    console.log(this.city)
-
     // weatherIcon.className = 'weather-icon owf';
     // weatherIcon.classList.add(`owf-${data.weather[0].id}`);
   }

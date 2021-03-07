@@ -5,6 +5,7 @@ import Weather from "./Widgets/weather";
 import Country from "./country";
 import Countries from "./countries";
 import Lang from "./lang";
+import Search from "./search";
 
 
 class Store {
@@ -24,6 +25,7 @@ const weatherStore = new Weather()
 const countryStore = new Country()
 const countriesStore = new Countries()
 const langStore = new Lang()
+const searchStore = new Search()
 
 export {
   store,
@@ -33,5 +35,6 @@ export {
   countryStore,
   countriesStore,
   langStore,
+  searchStore,
 
 };

@@ -1,8 +1,12 @@
 .search {
+  position: relative;
   display: flex;
+  align-items: center;
 
   &__input {
     margin-right: .5em;
+    padding: .25em 2em .25em 1em;
+
   }
 
   &__icon {
@@ -12,7 +16,12 @@
       width: 1.75em;
     }
   }
+}
 
-
-
+.clear {
+  position: absolute;
+  top: 50%;
+  right: 3em;
+  transform: translateY(-60%);
+  z-index: 20;
 }

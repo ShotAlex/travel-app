@@ -1,12 +1,13 @@
 import React from 'react';
 import classes from './Widgets.module.scss'
-import {exchangeStore, weatherStore} from "../../../store/store";
+import {exchangeStore, timeStore, weatherStore} from "../../../store/store";
 import {observer} from "mobx-react-lite";
 
 const Widgets = () => {
   React.useEffect(() => {
     // weatherStore.getWeather()
     // exchangeStore.getExchanges()
+    timeStore.getLocalTime()
   }, [])
 
   return (
@@ -39,6 +40,7 @@ const Widgets = () => {
       <section className={classes.widget}>
         <h3>Local Time</h3>
         <p>2 : 25</p>
+        <p>TimeStamp</p>
       </section>
     </aside>
   );

@@ -7,7 +7,7 @@ const Home = () => {
 
   const chooseCountry = (name) => {
     console.log(name)
-    weatherStore.getWeather()
+    // weatherStore.getWeather()
   }
 
   return (
