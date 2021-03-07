@@ -2,23 +2,29 @@ import React from 'react';
 import MainLayout from "../../containers/MainLayout";
 import classes from './Home.module.scss'
 import belImg from '../../assets/images/home-cards/belarus.jpg'
+import {countriesStore} from "../../store/store";
 
 const Home = () => {
 
   return (
     <MainLayout search={true} >
-      <article>
+      <section>
         <h1>Countries</h1>
-        <article className={classes.list}>
 
-          <button className={classes.card}>
-            <img src={belImg} alt="country" className={classes.list__cover}/>
-            <h2>Belarus</h2>
-            <p>Minsk</p>
-          </button>
+
+        <article className={classes.list}>
+          {
+            countriesStore.countries.map((item) => (
+              <button className={classes.card}>
+                <img src={item.countryImage} alt={`${item.country} ${item.capital}`} className={classes.list__cover}/>
+                <h2>{item.country}</h2>
+                <p>{item.capital}</p>
+              </button>
+            ))
+          }
 
         </article>
-      </article>
+      </section>
 
       {/*<section>Заглавная картинка</section>*/}
       {/*<section>Мне повезёт</section>*/}
