@@ -3,7 +3,7 @@ import belImg from "../assets/images/home-cards/belarus.jpg";
 
 
 
-class CountriesStore {
+class Countries {
   constructor() {
     makeAutoObservable(this);
   }
@@ -24,4 +24,4 @@ class CountriesStore {
 
 }
 
-export default CountriesStore;
+export default Countries;

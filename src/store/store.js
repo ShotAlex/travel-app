@@ -3,7 +3,8 @@ import Exchange from "./Widgets/exchange";
 import Time from "./Widgets/time";
 import Weather from "./Widgets/weather";
 import Country from "./country";
-import CountriesStore from "./countries";
+import Countries from "./countries";
+import Lang from "./lang";
 
 
 class Store {
@@ -23,7 +24,8 @@ const exchangeStore = new Exchange()
 const timeStore = new Time()
 const weatherStore = new Weather()
 const countryStore = new Country()
-const countriesStore = new CountriesStore()
+const countriesStore = new Countries()
+const langStore = new Lang()
 
 export {
   store,
@@ -32,4 +34,6 @@ export {
   weatherStore,
   countryStore,
   countriesStore,
+  langStore,
+
 };
