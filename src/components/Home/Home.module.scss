@@ -1,5 +1,9 @@
 .home {
+  padding: 1em;
+}
 
+.title {
+  margin: 1em 0;
 }
 
 .list {
@@ -60,7 +64,7 @@
     transform: scale(1.02);
 
     img {
-      transform: scale(1.75) translateY(1.5em) ;
+      transform: scale(1.75) translateY(1.5em);
     }
 
     h2,

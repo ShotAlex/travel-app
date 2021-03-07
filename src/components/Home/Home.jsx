@@ -8,8 +8,8 @@ const Home = () => {
 
   return (
     <MainLayout search={true} >
-      <section>
-        <h1>Countries</h1>
+      <section className={classes.home}>
+        <h1 className={classes.title}>Countries</h1>
 
 
         <article className={classes.list}>
