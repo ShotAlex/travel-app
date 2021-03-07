@@ -9,7 +9,6 @@ class Search {
   value = ''
 
   changeValue(value) {
-    console.log(this.value)
     this.value = value
   }
 

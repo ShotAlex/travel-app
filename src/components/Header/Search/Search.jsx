@@ -15,9 +15,10 @@ const Search = () => {
     searchStore.changeValue(e.target.value)
   }
 
-  const search = (e) => {
-    if(e.key === 'Enter'){
-      console.log('enter press here! ')
+  const search = (e, click = false) => {
+    console.log(e)
+    if(e.key === 'Enter' || click){
+      e.target.blur();
     }
   }
 
@@ -37,7 +38,7 @@ const Search = () => {
       />
       <label htmlFor="search" className={classes.search__icon}>
         <span className={classes.clear} onClick={() => clearSearch()}>x</span>
-        <img src={searchImg} alt="search country"/>
+        <img src={searchImg} alt="search country" onClick={() => search(true)}/>
       </label>
     </section>
   );
