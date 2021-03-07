@@ -1,5 +1,5 @@
 import { makeAutoObservable } from 'mobx';
-import {countriesStore, countryStore, langStore} from "../store";
+import {countryStore, langStore} from "../store";
 
 
 const KEY_API = 'cacc13c2899b6095815285b1dee10aaf';
@@ -27,11 +27,13 @@ class Weather {
   }
 
   setWeather(data) {
-    this.temperature = `${parseInt(data.main.temp)} ${this.metric}`
+    this.temperature = `${parseInt(data.main.temp)} °C`
     this.humidity = `Humidity: ${data.main.humidity}%`
     this.description = data.weather[0].description
     this.speed = `Speed: ${Math.round(data.wind.speed)}m/s`
     this.city = data.name;
+
+    console.log(this.city)
 
     // weatherIcon.className = 'weather-icon owf';
     // weatherIcon.classList.add(`owf-${data.weather[0].id}`);
