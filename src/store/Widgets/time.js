@@ -1,29 +1,52 @@
 import { makeAutoObservable } from 'mobx';
 import {langStore} from "../store";
 
-// const DAY_MS = 8.64e7;
-// const HOUR_MS = 3.6e6;
-// const MIN_MS = 6e4;
-// const SEC_MS = 1e3;
-// const INITIAL_STATE = {
-//   days: '--',
-//   hours: '--',
-//   minutes: '--',
-//   seconds: '--'
-// }
+const timeZone = {
+  'Minsk': {
+    zone: 'Europe',
+    capital: 'Minsk',
+  },
+  'Kiev': {
+    zone: 'Europe',
+    capital: 'Kiev',
+  },
+  'Moscow': {
+    zone: 'Europe',
+    capital: 'Moscow',
+  },
+  'Washington': {
+    zone: 'America',
+    capital: 'New_York',
+  },
+  'London': {
+    zone: 'Europe',
+    capital: 'London',
+  },
+  'Madrid': {
+    zone: 'Europe',
+    capital: 'Madrid',
+  },
+  'Beijing': {
+    zone: 'Asia',
+    capital: 'Hong_Kong',
+  },
+  'Tokyo': {
+    zone: 'Asia',
+    capital: 'Tokyo',
+  },
+}
 
 class Time {
   constructor() {
     makeAutoObservable(this);
   }
 
-  localTime = ''
-  localDate = ''
-  country = ''
+  localTime = '--:--:--:'
+  localDate = '00.00.0000'
 
   getLocalTime() {
     const options = {
-      timeZone: 'Europe/London',
+      timeZone:  'America/New_York',
       weekday: 'long',
       year: 'numeric',
       month: 'long',
@@ -33,26 +56,24 @@ class Time {
       second: 'numeric',
     };
 
-    const time = new Date().toLocaleDateString(langStore.currentLang, options)
-    this.setDate(time)
+    const fullDate = new Date().toLocaleDateString(langStore.currentLang, options)
+    this.setDate(fullDate)
   }
 
-  setDate(time) {
-    console.log(time)
-    console.log('TIME:', time)
-    // console.log('TIME:', time.match(/..:..:..\w/gi))
+  setDate(fullDate) {
+    const timeNow = fullDate.match(/..:..:..*/gi)
+    const dateNow = fullDate.replace(/(,)*...:..:..*/gi, '')
+
+    this.setLocalTime(timeNow)
+    this.setLocalDate(dateNow)
   }
 
   setLocalTime(time) {
-    this.localTime = time
+    this.localTime = time.toString()
   }
 
   setLocalDate(date) {
     this.localDate = date
-  }
-
-  setCountry(c) {
-    this.country = c
   }
 }
 

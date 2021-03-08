@@ -39,8 +39,8 @@ const Widgets = () => {
       {/*дата и время в столице страны*/}
       <section className={classes.widget}>
         <h3>Local Time</h3>
-        <p>2 : 25</p>
-        <p>TimeStamp</p>
+        <p>{timeStore.localTime}</p>
+        <p>{timeStore.localDate}</p>
       </section>
     </aside>
   );
