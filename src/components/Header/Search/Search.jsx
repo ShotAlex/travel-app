@@ -16,15 +16,11 @@ const Search = () => {
   }
 
   const search = (e, click = false) => {
-    console.log(e)
-    if(e.key === 'Enter' || click){
+    console.log('click search button')
+    if(e.key === 'Enter'){
       e.target.blur();
     }
   }
-
-  React.useEffect(() => {
-    inputRef.current.focus()
-  }, [])
 
   return (
     <section className={classes.search}>
@@ -35,11 +31,12 @@ const Search = () => {
         placeholder={'Search...'} id="search"
         ref={inputRef}
         onKeyPress={(e) => search(e)}
+        autoFocus
       />
       <label htmlFor="search" className={classes.search__icon}>
         <span className={classes.clear} onClick={() => clearSearch()}>x</span>
-        <img src={searchImg} alt="search country" onClick={() => search(true)}/>
       </label>
+      <img src={searchImg} alt="search country" onClick={() => search('', true)}/>
     </section>
   );
 };

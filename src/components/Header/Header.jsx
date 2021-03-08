@@ -9,9 +9,9 @@ const Header = ({search = false}) => {
   return (
     <header className={classes.header}>
       <Logotype />
-      {
-        search && <Search />
-      }
+        {
+          search && <Search />
+        }
       <LanguageMenu />
     </header>
   );
