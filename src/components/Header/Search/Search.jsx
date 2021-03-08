@@ -16,7 +16,6 @@ const Search = () => {
   }
 
   const search = (e, click = false) => {
-    console.log('click search button')
     if(e.key === 'Enter'){
       e.target.blur();
     }
@@ -36,7 +35,7 @@ const Search = () => {
       <label htmlFor="search" className={classes.search__icon}>
         <span className={classes.clear} onClick={() => clearSearch()}>x</span>
       </label>
-      <img src={searchImg} alt="search country" onClick={() => search('', true)}/>
+      <img src={searchImg} alt="search country" onClick={() => search('')}/>
     </section>
   );
 };
